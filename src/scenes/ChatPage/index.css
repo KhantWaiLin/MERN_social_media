@@ -1,0 +1,144 @@
+.Chat {
+    position: relative;
+    display: flex;
+    gap: 1rem;
+}
+
+.Left-side-chat {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex: 0.2;
+}
+
+
+
+.Chat-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: var(--cardColor);
+    border-radius: 1rem;
+    padding: 1rem;
+    height: auto;
+    min-height: 80vh;
+    overflow: hidden;
+}
+
+.Chat-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.Right-side-chat {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex: auto;
+}
+
+.conversation:hover {
+    background: #80808038;
+    cursor: pointer;
+}
+
+.conversation {
+    border-radius: 0.5rem;
+    padding: 10px;
+}
+
+.conversation>div {
+    position: relative;
+}
+
+.online-dot {
+    background-color: greenyellow;
+    border-radius: 50%;
+    position: absolute;
+    left: 2rem;
+    width: 1rem;
+    height: 1rem;
+}
+
+
+.chatbox-empty-message {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.message {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    flex-direction: column;
+    width: fit-content;
+    background-color: #fcf75e;
+    justify-content: flex-end;
+    font-size: "24px";
+    border-radius: 10px;
+}
+
+.chat-body {
+    height: 400px;
+    /* overflow-x: hidden; */
+    overflow-y: scroll;
+}
+
+.messageWrapperOther {
+    align-items: flex-start;
+}
+
+.messageWrapperUser {
+    align-items: flex-end;
+}
+
+.own {
+    background-color: #87cefa;
+}
+
+.chat-sender {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0rem;
+    padding: 10px;
+}
+
+
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    background: var(--buttonBg);
+    transition: all 100ms ease-out;
+    padding: 10px;
+}
+
+.button:hover {
+    color: black;
+    background: white;
+    border: 2px solid #fca61f;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .Chat {
+        grid-template-columns: 16% auto;
+    }
+
+    .follower.conversation>div>.name {
+        display: none;
+    }
+
+    .Left-side-chat {
+        flex: 1;
+    }
+}
